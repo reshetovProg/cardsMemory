@@ -16,3 +16,8 @@ void Card::draw(sf::RenderWindow& window)
 {
 	window.draw(cardSprite);
 }
+
+void Card::setPosition(float x, float y)
+{
+	cardSprite.setPosition(x, y);
+}

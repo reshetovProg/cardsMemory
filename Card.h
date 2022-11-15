@@ -11,7 +11,7 @@ class Card
 public:
 	Card(std::string nom, std::string lear);
 	void draw(sf::RenderWindow& window);
-	void setPosition()
+	void setPosition(float x, float y);
 
 };
 

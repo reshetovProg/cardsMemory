@@ -21,3 +21,8 @@ Card* Deck::getCard(int i)
 {
 	return deck[i];
 }
+
+int Deck::getSize()
+{
+	return index;
+}

@@ -6,7 +6,7 @@
 
 class Deck
 {
-	std::array <Card*,18> deck;
+	std::array <Card*,32> deck;
 	int index=0;
 
 
@@ -15,6 +15,7 @@ public:
 	void addCard(Card* card);
 	void shuffle();
 	Card* getCard (int i);
+	int getSize();
 
 };
 

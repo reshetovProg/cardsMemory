@@ -17,15 +17,19 @@ Game::Game():
 	Card* card7 = new Card("t", "k");
 	Card* card8 = new Card("v", "k");*/
 	deck = new Deck;
-	deck->addCard(new Card("6", "k"));
-	deck->addCard(new Card("7", "p"));
-	deck->addCard(new Card("8", "p"));
-	deck->addCard(new Card("10", "p"));
-	deck->addCard(new Card("k", "k"));
-	deck->addCard(new Card("q", "p"));
-	deck->addCard(new Card("t", "k"));
-	deck->addCard(new Card("v", "k"));
+	for (int i = 0; i < 2; i++) {
+		deck->addCard(new Card("6", "k"));
+		deck->addCard(new Card("7", "p"));
+		deck->addCard(new Card("8", "p"));
+		deck->addCard(new Card("10", "p"));
+		deck->addCard(new Card("k", "k"));
+		deck->addCard(new Card("q", "p"));
+		deck->addCard(new Card("t", "k"));
+		deck->addCard(new Card("v", "k"));
+	}
+	
 	deck->shuffle();
+
 	//deck[0]
 	
 
@@ -46,13 +50,24 @@ void Game::render()
 {
 	window.clear();
 	window.draw(bgrSprite);
-	Card* card = deck->getCard(0);
-	card->draw(window);
+	int size = deck->getSize();
+	for (int i = 0; i < size; i++) {
+		deck->getCard(i)->draw(window);
+	}
+
 	window.display();
 }
 
 void Game::update()
 {
+
+	for (int i = 0, k=0; i < 4; i++) {
+		for (int j = 0; j < 4; j++) {
+			deck->getCard(k++)->setPosition(j, i);
+
+		}
+	}
+
 }
 
 void Game::processEvent()
