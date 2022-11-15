@@ -1,2 +1,3 @@
-﻿  Card.cpp
+﻿  ConsoleApplication1.cpp
+d:\c++\sfml\calc\consoleapplication1\consoleapplication1.cpp(8): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
   ConsoleApplication1.vcxproj -> D:\C++\sfml\calc\ConsoleApplication1\x64\Debug\ConsoleApplication1.exe

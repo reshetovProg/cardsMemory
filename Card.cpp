@@ -6,7 +6,9 @@ Card::Card(std::string nom, std::string lear)
 	this->lear = lear;
 
 	cardTexture.loadFromFile("img\\"+nom+lear+".png");
-	//cardSprite.set
+	float k = W_CARD / cardTexture.getSize().x;
+	//std::cout << cardTexture.getSize().x <<" "<< cardTexture.getSize().y;
+	cardSprite.scale(k,k);
 	cardSprite.setTexture(cardTexture);
 }
 

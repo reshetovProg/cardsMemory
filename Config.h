@@ -1,6 +1,7 @@
 #pragma once
-const float W_WIDTH = 800;
-const float W_HEIGHT = 600;
+const float W_WIDTH = 1920;
+const float W_HEIGHT = 1080;
+const float W_CARD = 120;
 const std::string BACK_URL = "img\\background.jpg";
 /*const std::string C6_URL = "img\\6.png";
 const std::string C7_URL = "img\\7.png";

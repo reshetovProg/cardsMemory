@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Config.h"
 #include "Card.h"
+#include "Deck.h"
 
 class Game
 {
@@ -9,7 +10,7 @@ class Game
 	sf::Event event;
 	sf::Texture bgrTexture;
 	sf::Sprite bgrSprite;
-	Card* card1 = nullptr;
+	Deck* deck = nullptr;
 	void render();
 	void update();
 	void processEvent();
